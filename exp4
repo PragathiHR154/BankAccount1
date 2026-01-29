@@ -1,0 +1,10 @@
+git clone https://github.com/PragathiHR154/exp4.git
+cd exp4
+git checkout -b feature_branch
+touch new.txt
+git add new.txt
+git commit -m "added new "
+git push origin feature_branch
+git checkout main
+git pull origin main
+history -a
