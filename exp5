@@ -1,0 +1,23 @@
+cd "C:\Users\PRAGA\OneDrive\Desktop\lab_exp"
+git clone https://github.com/PragathiHR154/new.git
+cd new
+git checkout master
+git checkout main
+git tag v1.0
+git tag
+git tag -a v1.1 -m "v1.1 is created"
+git tag v1.0
+git tag v1.1
+git show v1.0
+git show v1.1
+git tag -l v1.*
+git push origin v1.0
+git tag v3.0
+git push --tags
+git tag -d v1.0
+git tag
+git push origin -d v1.0
+git push origin -d v1.0
+ping github.com
+git push origin -d v1.0
+history -a
