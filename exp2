@@ -1,0 +1,17 @@
+cd "C:\Users\PRAGA\OneDrive\Desktop\git_classdemo"
+ git init
+ git branch
+git branch feature_branch
+git checkout feature_branch
+touch file.txt
+git add file.txt
+git commit -m "Change in feature branch"
+
+git checkout master
+touch file.txt
+git add file.txt
+git commit -m "Change in master branch"
+
+git merge feature_branch
+git add file.txt
+git commit -m "Conflict resolved"
