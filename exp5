@@ -21,3 +21,7 @@ git push origin -d v1.0
 ping github.com
 git push origin -d v1.0
 history -a
+mvn archetype:generate
+mvn package
+mvn sit
+mvn site
