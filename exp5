@@ -13,5 +13,5 @@ git tag -d v1.0
 git push origin -d v1.0
 mvn archetype:generate
 mvn package
-mvn sit
 mvn site
+mvn clean
