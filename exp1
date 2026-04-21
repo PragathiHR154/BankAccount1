@@ -3,16 +3,13 @@ git config --global user.name "Pragathi"
 git config --global user.email "pragathihr44@gmail.com"
 git init
 ls
-ls
 git stauts
-git status
 git add file1.txt
 git status
 git commit -m "file1 is added"
 git add .
 git status
 git commit -m "all files are added"
-git log
 git log
 touch readme.txt report.xml index.html .gitignore error.log
 ls
