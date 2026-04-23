@@ -1,0 +1,181 @@
+public class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
+    public int subtract(int a, int b) {
+        return a - b;
+    }
+    public int multiply(int a, int b) {
+        return a * b;
+    }
+    public int divide(int a, int b) {
+        if (b == 0) {
+            throw new ArithmeticException("Cannot divide by zero");
+        }
+        return a / b;
+    }
+}
+____
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class CalculatorTest {
+    Calculator c = new Calculator();
+    @Test
+    public void testAdd() {
+        assertEquals(10, c.add(5, 5));
+    }
+    @Test
+    public void testSubtract() {
+        assertEquals(2, c.subtract(5, 3));
+    }
+    @Test
+    public void testMultiply() {
+        assertEquals(15, c.multiply(3, 5));
+    }
+    @Test
+    public void testDivide() {
+        assertEquals(2, c.divide(10, 5));
+    }
+    @Test(expected = ArithmeticException.class)
+    public void testDivideByZero() {
+        c.divide(10, 0);
+    }
+}
+
+5. Bank account ( balance, deposit n withdrawal)
+public class BankAccount {
+    double balance;
+
+    public BankAccount(double balance) {
+        this.balance = balance;
+    }
+
+    public void deposit(double amount) {
+        balance += amount;
+    }
+
+    public void withdraw(double amount) {
+        balance -= amount;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    // Main method
+    public static void main(String[] args) {
+        BankAccount account = new BankAccount(1000);
+
+        System.out.println("Initial Balance: " + account.getBalance());
+
+        account.deposit(500);
+        System.out.println("After Deposit: " + account.getBalance());
+
+        account.withdraw(300);
+        System.out.println("After Withdrawal: " + account.getBalance());
+    }
+}
+__________________
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+public class BankAccountTest {
+
+    @Test
+    public void testDeposit() {
+        BankAccount b = new BankAccount(1000);
+        b.deposit(500);
+        assertEquals(1500, b.getBalance(), 0.0);
+    }
+
+    @Test
+    public void testWithdraw() {
+        BankAccount b = new BankAccount(1000);
+        b.withdraw(200);
+        assertEquals(800, b.getBalance(), 0.0);
+    }
+}
+*******************
+public class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
+    public int subtract(int a, int b) {
+        return a - b;
+    }
+    public int multiply(int a, int b) {
+        return a * b;
+    }
+    public int divide(int a, int b) {
+        return a / b;
+    }
+    public static void main(String[] args) {
+        Calculator c = new Calculator();
+
+        System.out.println("Add: " + c.add(5, 5));
+        System.out.println("Sub: " + c.subtract(5, 3));
+        System.out.println("Mul: " + c.multiply(3, 5));
+        System.out.println("Div: " + c.divide(10, 5));
+    }
+}
+________________
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Hello World') {
+            steps {
+                bat 'echo Hello World'
+            }
+        }
+
+    }
+}
+__________________________
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Build') {
+            steps {
+                bat 'echo Building Hello World...'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                bat 'echo Testing Hello World...'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                bat 'echo Hello World Deployed!'
+            }
+        }
+
+    }
+}
+__________________________
+public class Grade {
+
+    public static void main(String[] args) {
+
+        int marks = 82;
+
+        if (marks >= 90) {
+            System.out.println("Grade: A");
+        } else if (marks >= 75) {
+            System.out.println("Grade: B");
+        } else if (marks >= 60) {
+            System.out.println("Grade: C");
+        } else if (marks >= 50) {
+            System.out.println("Grade: D");
+        } else {
+            System.out.println("Grade: F");
+        }
+    }
+}
